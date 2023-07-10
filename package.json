@@ -1,0 +1,46 @@
+{
+  "name": "playwright-demo-js",
+  "version": "1.0.0",
+  "description": "Playwright demo with java script",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:sauce": "saucectl run",
+    "show-report": "npx playwright show-report",
+    "test:smoke": "npx playwright test --grep @smoke --project=chrome",
+    "test:chrome": "npx playwright test --project=chromium",
+    "allure:clean": "rm -rf allure-results",
+    "allure-generate": "allure generate ./allure-results --clean",
+    "allure:report": "npm run allure-generate && allure serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://JayakrishnaYeluru@github.com/JayakrishnaYeluru/playwright-demo-js.git"
+  },
+  "keywords": [
+    "Playwright",
+    "JavaScript"
+  ],
+  "author": "Jay Yeluru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayakrishnaYeluru/playwright-demo-js/issues"
+  },
+  "homepage": "https://github.com/JayakrishnaYeluru/playwright-demo-js#readme",
+  "dependencies": {
+    "allure-playwright": "^2.0.0-beta.16",
+    "fs": "^0.0.1-security",
+    "lts": "^1.2.0",
+    "n": "^9.0.0",
+    "playwright": "^1.24.2",
+    "prettier": "^2.6.2",
+    "prune": "^0.0.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.31.1",
+    "allure-playwright": "^2.0.0-beta.16",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "saucectl": "^0.133.0"
+  }
+}
